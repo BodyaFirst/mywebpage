@@ -1,11 +1,348 @@
+```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Моя HTTPS сторінка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Космос — майбутнє людства</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080b1a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Верхнє меню */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            background: rgba(8, 11, 26, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #7aa2ff;
+        }
+
+        /* Головний блок */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            background:
+                radial-gradient(circle at 20% 30%, #283878 0, transparent 25%),
+                radial-gradient(circle at 80% 70%, #392060 0, transparent 25%),
+                #080b1a;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #7aa2ff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #c5c9dc;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 30px;
+            background: #5865f2;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            background: #7280ff;
+        }
+
+        /* Секції */
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #7aa2ff;
+        }
+
+        /* Картки */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: #11162b;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #242b4a;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #5865f2;
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #b6bad0;
+        }
+
+        /* Цікавий факт */
+        .fact {
+            max-width: 900px;
+            margin: auto;
+            padding: 45px;
+            text-align: center;
+            background: linear-gradient(135deg, #151c3a, #21183b);
+            border-radius: 25px;
+            border: 1px solid #343c68;
+        }
+
+        .fact h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .fact p {
+            color: #c5c9dc;
+            font-size: 18px;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #050711;
+            color: #777d99;
+        }
+
+        /* Адаптація для телефону */
+        @media (max-width: 800px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Привіт!</h1>
-    <p>Це моя публічна HTTPS сторінка.</p>
+
+    <header>
+        <div class="logo">🚀 COSMOS</div>
+
+        <nav>
+            <a href="#about">Про космос</a>
+            <a href="#future">Майбутнє</a>
+            <a href="#facts">Факт</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Головний екран -->
+        <section class="hero">
+            <div class="hero-content">
+
+                <h1>
+                    Космос — це наше
+                    <span>майбутнє</span>
+                </h1>
+
+                <p>
+                    Людство завжди прагнуло досліджувати невідоме.
+                    Сьогодні космос стає наступним великим напрямком
+                    розвитку науки й технологій.
+                </p>
+
+                <a href="#about" class="button">
+                    Дізнатися більше ↓
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- Про космос -->
+        <section id="about">
+
+            <h2 class="section-title">
+                Чому <span>космос</span> важливий?
+            </h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icon">🌌</div>
+                    <h3>Дослідження</h3>
+                    <p>
+                        Вивчення Всесвіту допомагає нам краще зрозуміти
+                        походження планет, зірок та самої Землі.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🛰️</div>
+                    <h3>Технології</h3>
+                    <p>
+                        Космічні дослідження сприяють розвитку нових
+                        технологій, які згодом використовуються на Землі.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🌍</div>
+                    <h3>Майбутнє</h3>
+                    <p>
+                        Освоєння космосу може відкрити людству нові
+                        можливості для розвитку та досліджень.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Майбутнє -->
+        <section id="future">
+
+            <h2 class="section-title">
+                Людство <span>завтра</span>
+            </h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icon">🔴</div>
+                    <h3>Марс</h3>
+                    <p>
+                        Червона планета є одним із головних напрямків
+                        майбутніх космічних досліджень.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🌙</div>
+                    <h3>Місяць</h3>
+                    <p>
+                        Місяць може стати важливою базою для подальшого
+                        дослідження Сонячної системи.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🚀</div>
+                    <h3>Нові відкриття</h3>
+                    <p>
+                        Нові телескопи та космічні апарати дозволяють
+                        знаходити об'єкти, про які ми раніше не знали.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Факт -->
+        <section id="facts">
+
+            <div class="fact">
+
+                <h2>✨ Цікавий факт</h2>
+
+                <p>
+                    Світлу від Сонця потрібно приблизно 8 хвилин і 20 секунд,
+                    щоб подолати відстань до Землі.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Космос — майбутнє людства</p>
+        <p>Навчальний вебпроєкт</p>
+    </footer>
+
 </body>
 </html>
+```
